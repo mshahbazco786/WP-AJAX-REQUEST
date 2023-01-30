@@ -9,9 +9,12 @@ wp_enqueue_script( 'jquery' );
 wp_enqueue_script( 'ajax-search', get_template_directory_uri() . '/js/ajax-search.js', array( 'jquery' ) );
 
 /*
-Create the AJAX search function: In the ajax-search.js file, create a function that will handle the AJAX search request. This function should use the jQuery $.ajax() method to send a GET request to the admin-ajax.php file with the search query as a parameter.
+Create the AJAX search function: In the ajax-search.js file, create a function that will handle the AJAX search request. 
+This function should use the jQuery $.ajax() method to send a GET request to the admin-ajax.php file with the search query as a parameter.
 
-Handle the AJAX request on the server side: In your theme's functions.php file, add an action hook to handle the AJAX request. Use the wp_ajax_{action} and wp_ajax_nopriv_{action} hooks to handle logged-in and non-logged-in users, respectively. In this function, use the $_GET variable to retrieve the search query and use the WP_Query class to perform the search and return the results.
+Handle the AJAX request on the server side: In your theme's functions.php file, add an action hook to handle the AJAX request. 
+Use the wp_ajax_{action} and wp_ajax_nopriv_{action} hooks to handle logged-in and non-logged-in users, respectively. 
+In this function, use the $_GET variable to retrieve the search query and use the WP_Query class to perform the search and return the results.
 
 Display the search results: Use jQuery to update the search results container with the returned data and display it on the page.
 */
@@ -37,13 +40,17 @@ Display the search results: Use jQuery to update the search results container wi
 <?php
 
 /*
-This is a basic HTML form with an input field for the search query and a submit button. The form has an id of "search-form" which is used in the JavaScript/jQuery code to handle the form submission and send the AJAX request.
+This is a basic HTML form with an input field for the search query and a submit button. The form has an id of "search-form" which is used in the JavaScript/jQuery 
+code to handle the form submission and send the AJAX request.
 
 The form also has a div with an id of "search-results" where the search results will be displayed.
 
-With this form and the code I provided before, when a user submits the form, the JavaScript/jQuery function will handle the form submission, send the AJAX request to the server, and update the "search-results" div with the returned search results.
+With this form and the code I provided before, when a user submits the form, the JavaScript/jQuery function will handle the form submission, send the AJAX 
+request to the server, and update the "search-results" div with the returned search results.
 
-It is important to note that this is a simple example, you can modify the form to add more complex search criteria, such as select boxes for categories or tags, or text inputs for custom fields.
+It is important to note that this is a simple example, you can modify the form to add more complex search criteria, such as select boxes for categories or tags, or 
+text inputs for custom fields.
 
-Keep in mind that the search form will not work on its own, you need to have the AJAX code and the server-side code to handle the requests and return the search results.
+Keep in mind that the search form will not work on its own, you need to have the AJAX code and the server-side code to handle the requests and return the search 
+results.
 */
